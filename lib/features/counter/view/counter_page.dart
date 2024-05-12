@@ -38,43 +38,11 @@ class CounterView extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const CounterText(),
-              20.heightBox,
-              Text(
-                'Shopping',
-                style: Theme.of(context).textTheme.titleLarge,
-              ),
               10.heightBox,
-              Text(
-                'Buy some grocery',
-                style: Theme.of(context).textTheme.labelLarge,
-              ),
+              const CounterText(),
               10.heightBox,
               const ThemeSegmentedBtn(),
-              10.heightBox,
-              Slider(
-                value: 0.5,
-                onChanged: (value) {},
-              ),
-              10.heightBox,
-              ElevatedButton(
-                onPressed: () {},
-                child: 'Hey'.text.make(),
-              ),
-              10.heightBox,
-              RadioListTile(
-                title: const Text('RadioListTile'),
-                value: true,
-                groupValue: true,
-                onChanged: (value) {},
-              ),
-              10.heightBox,
-              TextFormField(
-                decoration: const InputDecoration(
-                  hintText: 'Enter a number',
-                  label: Text('Enter a number'),
-                ),
-              ),
+              30.heightBox,
             ],
           ),
         ),
@@ -114,8 +82,7 @@ class CounterAppBarTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final l10n = context.l10n;
-    // return Text(l10n.counterAppBarTitle);
-    return Text('Counter', style: Theme.of(context).textTheme.displaySmall);
+    return Text(l10n.counterAppBarTitle, style: Theme.of(context).textTheme.displaySmall);
   }
 }
 
@@ -126,6 +93,6 @@ class CounterText extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final theme = Theme.of(context);
     final count = ref.watch(counterPod);
-    return Text('Recent Transaction', style: Theme.of(context).textTheme.headlineSmall);
+    return Text('$count', style: theme.textTheme.headlineSmall);
   }
 }
