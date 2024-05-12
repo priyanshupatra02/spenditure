@@ -6,7 +6,7 @@ import 'package:spenditure/const/color/app_colors.dart';
 ///This class defines light theme and dark theme
 ///Here we used flex color scheme
 class Themes {
-  static ThemeData get theme => FlexThemeData.light(
+  static ThemeData get lightTheme => FlexThemeData.light(
         // scheme: FlexScheme.materialBaseline,
         usedColors: 4,
         surfaceMode: FlexSurfaceMode.levelSurfacesLowScaffold,
@@ -79,9 +79,16 @@ class Themes {
         usedColors: 4,
         surfaceMode: FlexSurfaceMode.levelSurfacesLowScaffold,
         blendLevel: 13,
-        colorScheme: const ColorScheme.light(
-          primary: AppColors.kPrimaryColor,
-          // onPrimary: Color(0xFF7F3DFF),
+        colorScheme: const ColorScheme.dark(
+          background: AppColors.kBackgroundColor, //scaffold bg
+          primary:
+              AppColors.kPrimaryColor, //buttons (floating action button), text-field border color
+          onPrimary: AppColors.kOnPrimaryColor, //text on floating action button
+          secondary: AppColors.kSecondaryColor, //buttons (elevated buttons)
+          onSecondary: AppColors.kOnSecondaryColor, //text & icon on segmented buttons
+          surface: AppColors.kSurfaceColor, //appbar, textfield bg
+          onSurface: AppColors.kOnSurfaceColor, //text on scaffold's body
+          outline: AppColors.kOutlineColor, //segmented button border, elevated button border
         ),
         subThemesData: const FlexSubThemesData(
           blendOnLevel: 20,
