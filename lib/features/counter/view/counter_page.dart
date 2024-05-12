@@ -1,11 +1,11 @@
 import 'package:auto_route/annotations.dart';
 import 'package:flutter/material.dart';
-
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:spenditure/features/counter/controller/counter_state_pod.dart';
 import 'package:spenditure/features/theme_segmented_btn/view/theme_segmented_btn.dart';
 import 'package:spenditure/l10n/l10n.dart';
 import 'package:spenditure/shared/widget/app_locale_popup.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 @RoutePage(
   deferredLoading: true,
@@ -31,14 +31,52 @@ class CounterView extends StatelessWidget {
           AppLocalePopUp(),
         ],
       ),
-      body: const Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            CounterText(),
-            ThemeSegmentedBtn(),
-          ],
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 8.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              const CounterText(),
+              20.heightBox,
+              Text(
+                'Shopping',
+                style: Theme.of(context).textTheme.titleLarge,
+              ),
+              10.heightBox,
+              Text(
+                'Buy some grocery',
+                style: Theme.of(context).textTheme.labelLarge,
+              ),
+              10.heightBox,
+              const ThemeSegmentedBtn(),
+              10.heightBox,
+              Slider(
+                value: 0.5,
+                onChanged: (value) {},
+              ),
+              10.heightBox,
+              ElevatedButton(
+                onPressed: () {},
+                child: 'Hey'.text.make(),
+              ),
+              10.heightBox,
+              RadioListTile(
+                title: const Text('RadioListTile'),
+                value: true,
+                groupValue: true,
+                onChanged: (value) {},
+              ),
+              10.heightBox,
+              TextFormField(
+                decoration: const InputDecoration(
+                  hintText: 'Enter a number',
+                  label: Text('Enter a number'),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
       floatingActionButton: Column(
@@ -76,7 +114,8 @@ class CounterAppBarTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final l10n = context.l10n;
-    return Text(l10n.counterAppBarTitle);
+    // return Text(l10n.counterAppBarTitle);
+    return Text('Counter', style: Theme.of(context).textTheme.displaySmall);
   }
 }
 
@@ -87,6 +126,6 @@ class CounterText extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final theme = Theme.of(context);
     final count = ref.watch(counterPod);
-    return Text('$count', style: theme.textTheme.displayLarge);
+    return Text('Recent Transaction', style: Theme.of(context).textTheme.headlineSmall);
   }
 }
