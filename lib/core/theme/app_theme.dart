@@ -1,6 +1,7 @@
 import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:spenditure/const/color/app_colors.dart';
 
 ///This class defines light theme and dark theme
 ///Here we used flex color scheme
@@ -11,31 +12,32 @@ class Themes {
         surfaceMode: FlexSurfaceMode.levelSurfacesLowScaffold,
         blendLevel: 4,
         colorScheme: const ColorScheme.light(
-          background: Colors.white, //scaffold bg
-          primary: Color(0xFF7F3DFF), //buttons (floating action button), text-field border color
-          onPrimary: Colors.white, //text on floating action button
-          secondary: Color(0xFFEEE5FF), //buttons (elevated buttons)
-          onSecondary: Color(0xFF7F3DFF), //text & icon on segmented buttons
-          surface: Colors.white, //appbar, textfield bg
-          onSurface: Colors.black, //text on scaffold's body
-          outline: Color(0xFF7F3DFF), //segmented button border, elevated button border
+          background: AppColors.kBackgroundColor, //scaffold bg
+          primary:
+              AppColors.kPrimaryColor, //buttons (floating action button), text-field border color
+          onPrimary: AppColors.kOnPrimaryColor, //text on floating action button
+          secondary: AppColors.kSecondaryColor, //buttons (elevated buttons)
+          onSecondary: AppColors.kOnSecondaryColor, //text & icon on segmented buttons
+          surface: AppColors.kSurfaceColor, //appbar, textfield bg
+          onSurface: AppColors.kOnSurfaceColor, //text on scaffold's body
+          outline: AppColors.kOutlineColor, //segmented button border, elevated button border
         ),
         // Define the text theme.
         textTheme: TextTheme(
           headlineSmall: const TextStyle(
             fontWeight: FontWeight.w600,
-            color: Color(0xFF0D0E0F),
+            color: AppColors.kSecondaryBlackColor,
             fontSize: 20.0,
             letterSpacing: 0.5,
           ),
           titleLarge: const TextStyle(
-            color: Color(0xFF0D0E0F),
+            color: AppColors.kSecondaryBlackColor,
             fontSize: 16.0,
             letterSpacing: 0.5,
           ),
           labelLarge: TextStyle(
             fontSize: 13.0,
-            color: Colors.grey.shade600,
+            color: AppColors.kGrey600,
             letterSpacing: 0.5,
           ),
         ),
@@ -78,7 +80,7 @@ class Themes {
         surfaceMode: FlexSurfaceMode.levelSurfacesLowScaffold,
         blendLevel: 13,
         colorScheme: const ColorScheme.light(
-          primary: Color(0xFF7F3DFF),
+          primary: AppColors.kPrimaryColor,
           // onPrimary: Color(0xFF7F3DFF),
         ),
         subThemesData: const FlexSubThemesData(
