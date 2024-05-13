@@ -66,8 +66,7 @@ class _SplashViewState extends ConsumerState<SplashView> {
           futureInitializerPod,
           (previous, next) {
             if (next is AsyncData && next.valueOrNull != null) {
-              talker.info(
-                  "Initialization takes ${stopwatch.elapsedMilliseconds}");
+              talker.info("Initialization takes ${stopwatch.elapsedMilliseconds}");
               widget.onInitialized(next.requireValue);
             }
           },
@@ -94,8 +93,7 @@ class LoaderChild extends StatefulWidget {
   State<LoaderChild> createState() => _LoaderChildState();
 }
 
-class _LoaderChildState extends State<LoaderChild>
-    with TickerProviderStateMixin {
+class _LoaderChildState extends State<LoaderChild> with TickerProviderStateMixin {
   late final AnimationController _controller = AnimationController(
     duration: const Duration(seconds: 2),
     vsync: this,
@@ -113,6 +111,9 @@ class _LoaderChildState extends State<LoaderChild>
   @override
   Widget build(BuildContext context) {
     return SafeArea(
+      top: false,
+      left: false,
+      right: false,
       child: Container(
         color: Colors.white,
         child: Stack(
