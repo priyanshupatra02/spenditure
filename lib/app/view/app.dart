@@ -35,8 +35,7 @@ class _AppState extends ConsumerState<App> with GlobalHelper {
       debugShowCheckedModeBanner: false,
       title: 'Example App',
       theme: Themes.lightTheme,
-      //!Uncomment this to usedark theme
-      // darkTheme: Themes.darkTheme,
+      darkTheme: Themes.darkTheme,
       themeMode: currentTheme,
       routerConfig: approuter.config(
         placeholder: (context) => const SizedBox.shrink(),
@@ -63,7 +62,8 @@ class _AppState extends ConsumerState<App> with GlobalHelper {
           final mediaquery = MediaQuery.of(context);
           child = MediaQuery(
             data: mediaquery.copyWith(
-              textScaler: TextScaler.linear(mediaquery.textScaleFactor.clamp(0, 1)),
+              textScaler:
+                  TextScaler.linear(mediaquery.textScaleFactor.clamp(0, 1)),
             ),
             child: child,
           );

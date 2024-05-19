@@ -87,7 +87,7 @@ void main() {
             ProviderScope(
               parent: container,
               child: MaterialApp(
-                theme: Themes.lightTheme,
+                theme: Themes.theme,
                 darkTheme: Themes.darkTheme,
                 themeMode: currentTheme,
                 localizationsDelegates: AppLocalizations.localizationsDelegates,
@@ -127,7 +127,7 @@ void main() {
             ProviderScope(
               parent: container,
               child: MaterialApp(
-                theme: Themes.lightTheme,
+                theme: Themes.theme,
                 darkTheme: Themes.darkTheme,
                 themeMode: currentTheme,
                 localizationsDelegates: AppLocalizations.localizationsDelegates,
@@ -143,7 +143,8 @@ void main() {
             () async {
               await tester.tap(find.byIcon(Icons.dark_mode));
               expect(container.read(themeSelectionPod).length, 1);
-              expect(container.read(themeSelectionPod), equals({ThemeMode.dark}));
+              expect(
+                  container.read(themeSelectionPod), equals({ThemeMode.dark}));
             },
           );
         },
@@ -163,7 +164,7 @@ void main() {
             ProviderScope(
               parent: container,
               child: MaterialApp(
-                theme: Themes.lightTheme,
+                theme: Themes.theme,
                 darkTheme: Themes.darkTheme,
                 themeMode: currentTheme,
                 localizationsDelegates: AppLocalizations.localizationsDelegates,
@@ -180,7 +181,8 @@ void main() {
             () async {
               await tester.tap(find.byIcon(Icons.dark_mode));
               expect(container.read(themeSelectionPod).length, 1);
-              expect(container.read(themeSelectionPod), equals({ThemeMode.dark}));
+              expect(
+                  container.read(themeSelectionPod), equals({ThemeMode.dark}));
             },
           );
           await tester.pump();
@@ -212,7 +214,7 @@ void main() {
             ProviderScope(
               parent: container,
               child: MaterialApp(
-                theme: Themes.lightTheme,
+                theme: Themes.theme,
                 darkTheme: Themes.darkTheme,
                 themeMode: currentTheme,
                 localizationsDelegates: AppLocalizations.localizationsDelegates,
@@ -229,7 +231,8 @@ void main() {
             () async {
               await tester.tap(find.byIcon(Icons.light_mode));
               expect(container.read(themeSelectionPod).length, 1);
-              expect(container.read(themeSelectionPod), equals({ThemeMode.light}));
+              expect(
+                  container.read(themeSelectionPod), equals({ThemeMode.light}));
             },
           );
           await tester.pump();
@@ -261,7 +264,7 @@ void main() {
             ProviderScope(
               parent: container,
               child: MaterialApp(
-                theme: Themes.lightTheme,
+                theme: Themes.theme,
                 darkTheme: Themes.darkTheme,
                 themeMode: currentTheme,
                 localizationsDelegates: AppLocalizations.localizationsDelegates,
@@ -278,7 +281,8 @@ void main() {
             () async {
               await tester.tap(find.byIcon(Icons.light_mode));
               expect(container.read(themeSelectionPod).length, 1);
-              expect(container.read(themeSelectionPod), equals({ThemeMode.light}));
+              expect(
+                  container.read(themeSelectionPod), equals({ThemeMode.light}));
             },
           );
           await tester.pump();
