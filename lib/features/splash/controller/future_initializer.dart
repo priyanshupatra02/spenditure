@@ -10,7 +10,7 @@ import 'package:spenditure/shared/riverpod_ext/riverpod_observer.dart';
 final futureInitializerPod =
     FutureProvider.autoDispose<ProviderContainer>((ref) async {
   ///Additional intial delay duration for app
-  // await Future.delayed(const Duration(seconds: 1));
+  await Future.delayed(const Duration(seconds: 10));
   await (init());
   await Hive.initFlutter();
 

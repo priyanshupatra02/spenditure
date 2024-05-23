@@ -4,6 +4,10 @@
 class R {
   const R._();
 
+  /// ![preview](file:///Users/priyanshupatra/Desktop/Developer/Flutter Resources & Projects/MacBook/flutter projects/spenditure/assets/animation/onboarding_animation.riv)
+  static const String ASSETS_ANIMATION_ONBOARDING_ANIMATION_RIV =
+      'assets/animation/onboarding_animation.riv';
+
   /// ![preview](file:///Users/priyanshupatra/Desktop/Developer/Flutter Resources & Projects/MacBook/flutter projects/spenditure/assets/icons/spenditure_logo.svg)
   static const String ASSETS_ICONS_SPENDITURE_LOGO_SVG =
       'assets/icons/spenditure_logo.svg';

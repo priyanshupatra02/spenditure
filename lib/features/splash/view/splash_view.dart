@@ -1,9 +1,16 @@
+import 'dart:ui';
+
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:rive/rive.dart';
 import 'package:spenditure/bootstrap.dart';
+import 'package:spenditure/const/resource.dart';
 import 'package:spenditure/features/splash/controller/future_initializer.dart';
 import 'package:spenditure/shared/riverpod_ext/asynvalue_easy_when.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 ///This view displayed for initializing all the required things on initialization.
 /// This will help for initial loading screen for apps with heavy things initialization;
@@ -66,8 +73,7 @@ class _SplashViewState extends ConsumerState<SplashView> {
           futureInitializerPod,
           (previous, next) {
             if (next is AsyncData && next.valueOrNull != null) {
-              talker.info(
-                  "Initialization takes ${stopwatch.elapsedMilliseconds}");
+              talker.info("Initialization takes ${stopwatch.elapsedMilliseconds}");
               widget.onInitialized(next.requireValue);
             }
           },
@@ -94,8 +100,7 @@ class LoaderChild extends StatefulWidget {
   State<LoaderChild> createState() => _LoaderChildState();
 }
 
-class _LoaderChildState extends State<LoaderChild>
-    with TickerProviderStateMixin {
+class _LoaderChildState extends State<LoaderChild> with TickerProviderStateMixin {
   late final AnimationController _controller = AnimationController(
     duration: const Duration(seconds: 2),
     vsync: this,
@@ -112,38 +117,55 @@ class _LoaderChildState extends State<LoaderChild>
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Container(
-        color: Colors.white,
-        child: Stack(
-          alignment: AlignmentDirectional.center,
-          children: [
-            Center(
-              child: RotationTransition(
-                turns: _animation,
-                child: const FlutterLogo(
-                  size: 100,
+    return Material(
+      child: Stack(
+        children: [
+         
+          Positioned.fill(
+            child: BackdropFilter(
+              filter: ImageFilter.blur(sigmaX: 50, sigmaY: 50),
+              child: const SizedBox(),
+            ),
+          ),
+          //animation
+          const RiveAnimation.asset(
+            R.ASSETS_ANIMATION_ONBOARDING_ANIMATION_RIV,
+          ),
+           Positioned.fill(
+            child: BackdropFilter(
+              filter: ImageFilter.blur(sigmaX: 50, sigmaY: 50),
+              child: const SizedBox(),
+            ),
+          ),
+           // logo
+          Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                RotationTransition(
+                  turns: _animation,
+                  child: SvgPicture.asset(
+                    R.ASSETS_ICONS_SPENDITURE_LOGO_SVG,
+                    height: 100,
+                    width: 100,
+                  ),
                 ),
-              ),
-            ),
-            const Positioned(
-              bottom: 44,
-              child: CircularProgressIndicator(
-                color: Colors.amber,
-              ),
-            ),
-            const Positioned(
-              bottom: 16,
-              child: Material(
-                  child: Text(
-                "Welcome to Riverpod Simple Architecture App",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
+                10.heightBox,
+                Text(
+                  "Spenditure.",
+                  style: TextStyle(
+                    fontSize: Theme.of(context).textTheme.headlineLarge?.fontSize,
+                    fontWeight: FontWeight.w500,
+                  ),
                 ),
-              )),
+                40.heightBox,
+                const CupertinoActivityIndicator(
+                  color: Colors.deepPurpleAccent,
+                ),
+              ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
