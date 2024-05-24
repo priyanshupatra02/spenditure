@@ -1,8 +1,6 @@
 import 'package:auto_route/annotations.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:spenditure/const/color/app_colors.dart';
-import 'package:spenditure/const/resource.dart';
 import 'package:spenditure/features/home/view/widgets/account_balance_header_text.dart';
 import 'package:spenditure/features/home/view/widgets/income_and_expense_widget.dart';
 import 'package:spenditure/features/home/view/widgets/quick_action_widgets.dart';
@@ -43,7 +41,7 @@ class HomeView extends StatelessWidget {
             const TotalAccountBalance(),
             30.heightBox,
             //income & expense
-            const IncomeAndExpenseWidget(),
+            const IncomeAndExpenseButtons(),
           ],
         ),
         flexibleSpace: Container(
