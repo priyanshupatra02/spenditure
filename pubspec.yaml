@@ -37,6 +37,7 @@ dependencies:
   talker_flutter: ^4.2.0
   velocity_x: ^4.1.2
   rive: ^0.13.4
+  fl_chart: ^0.68.0
 
 dev_dependencies:
   icons_launcher: ^2.1.7
