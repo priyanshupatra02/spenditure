@@ -8,6 +8,12 @@ class R {
   static const String ASSETS_ANIMATION_ONBOARDING_ANIMATION_RIV =
       'assets/animation/onboarding_animation.riv';
 
+  /// ![preview](file:///Users/priyanshupatra/Desktop/Developer/Flutter Resources & Projects/MacBook/flutter projects/spenditure/assets/icons/expense.svg)
+  static const String ASSETS_ICONS_EXPENSE_SVG = 'assets/icons/expense.svg';
+
+  /// ![preview](file:///Users/priyanshupatra/Desktop/Developer/Flutter Resources & Projects/MacBook/flutter projects/spenditure/assets/icons/income.svg)
+  static const String ASSETS_ICONS_INCOME_SVG = 'assets/icons/income.svg';
+
   /// ![preview](file:///Users/priyanshupatra/Desktop/Developer/Flutter Resources & Projects/MacBook/flutter projects/spenditure/assets/icons/spenditure_logo.svg)
   static const String ASSETS_ICONS_SPENDITURE_LOGO_SVG =
       'assets/icons/spenditure_logo.svg';

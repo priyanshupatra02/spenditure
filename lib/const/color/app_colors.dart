@@ -10,6 +10,9 @@ class AppColors {
   static const Color kPrimaryColor = Color(0xFF7F3DFF);
   static const Color kOnPrimaryColor = Colors.white;
 
+  //appbar gradient
+  static const Color kAppBarGradientStart = Color(0xFFFFF6E5);
+  static const Color kAppBarGradientEnd = Color(0xFFF8EDD8);
   //secondary colors
   static const Color kSecondaryColor = Color(0xFFEEE5FF);
   static const Color kOnSecondaryColor = Color(0xFF7F3DFF);
@@ -22,8 +25,8 @@ class AppColors {
   static const Color kOutlineColor = Color(0xFF7F3DFF);
 
   //alert colors
-  static const Color kErrorColor = Colors.red;
-  static const Color kSuccessColor = Colors.green;
+  static const Color kErrorColor = Color(0xFFFD3C4A);
+  static const Color kSuccessColor = Color(0xFF00A86B);
 
   //grey colors
   static Color kGrey100 = Colors.grey.shade100;

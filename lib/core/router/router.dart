@@ -6,8 +6,8 @@ import 'package:spenditure/core/router/router.gr.dart';
 class AppRouter extends $AppRouter {
   @override
   late final List<AutoRoute> routes = [
-    AutoRoute(
-      page: CounterRoute.page,
+    AdaptiveRoute(
+      page: HomeRoute.page,
       path: '/',
       initial: true,
     ),

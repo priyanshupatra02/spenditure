@@ -10,7 +10,7 @@ import 'package:spenditure/shared/riverpod_ext/riverpod_observer.dart';
 final futureInitializerPod =
     FutureProvider.autoDispose<ProviderContainer>((ref) async {
   ///Additional intial delay duration for app
-  await Future.delayed(const Duration(seconds: 10));
+  // await Future.delayed(const Duration(seconds: 10));
   await (init());
   await Hive.initFlutter();
 
@@ -23,7 +23,7 @@ final futureInitializerPod =
     },
   );
 
-  ///TODO: Replace box name with your unique name
+  //TODO: Replace box name with your unique name
   final appBox = await Hive.openBox(
     'AppBox',
     encryptionCipher: encryptionCipher,
