@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:spenditure/const/color/app_colors.dart';
 
 class QuickActionWidgets extends StatelessWidget {
@@ -8,6 +9,8 @@ class QuickActionWidgets extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final DateTime now = DateTime.now();
+
     return Row(
       children: [
         //profile picture
@@ -36,9 +39,15 @@ class QuickActionWidgets extends StatelessWidget {
           style: OutlinedButton.styleFrom(
             side: BorderSide(color: AppColors.kPrimaryColor.withOpacity(0.3)),
           ),
-          onPressed: () {},
+          onPressed: () {
+            showDatePicker(
+              context: context,
+              firstDate: DateTime(2024),
+              lastDate: DateTime.now(),
+            );
+          },
           icon: const Icon(Icons.arrow_drop_down_rounded),
-          label: const Text('October'),
+          label: Text(DateFormat.MMMMd().format(now).toString()),
         ),
         const Spacer(),
         const Icon(
