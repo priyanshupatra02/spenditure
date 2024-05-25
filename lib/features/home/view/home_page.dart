@@ -64,19 +64,20 @@ class HomeView extends StatelessWidget {
           ),
         ),
       ),
-      body: SafeArea(
+      body: const SafeArea(
         child: SingleChildScrollView(
-          physics: const BouncingScrollPhysics(),
+          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+          physics: BouncingScrollPhysics(),
           child: Column(
             children: [
               //Spend Frequency Header Text
-              // const SpendFrequencyHeaderText().pSymmetric(h: 20, v: 20),
+              //  HeaderTextWidget(
+              //   title: 'Spend Frequency',
+              //  ).pSymmetric(h: 20, v: 20),
               //Line Chart
               // const LineChartWidget(),
-              25.heightBox,
               //transaction dates
-              const TransactionDatesWidget(),
-              
+              TransactionDatesWidget(),
             ],
           ),
         ),

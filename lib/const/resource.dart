@@ -28,4 +28,16 @@ class R {
   /// ![preview](file:///Users/priyanshupatra/Desktop/Developer/Flutter Resources & Projects/MacBook/flutter projects/spenditure/assets/logo/ic_launcher_big.png)
   static const String ASSETS_LOGO_IC_LAUNCHER_BIG_PNG =
       'assets/logo/ic_launcher_big.png';
+
+  /// ![preview](file:///Users/priyanshupatra/Desktop/Developer/Flutter Resources & Projects/MacBook/flutter projects/spenditure/assets/transaction_icons/food.svg)
+  static const String ASSETS_TRANSACTION_ICONS_FOOD_SVG =
+      'assets/transaction_icons/food.svg';
+
+  /// ![preview](file:///Users/priyanshupatra/Desktop/Developer/Flutter Resources & Projects/MacBook/flutter projects/spenditure/assets/transaction_icons/shopping.svg)
+  static const String ASSETS_TRANSACTION_ICONS_SHOPPING_SVG =
+      'assets/transaction_icons/shopping.svg';
+
+  /// ![preview](file:///Users/priyanshupatra/Desktop/Developer/Flutter Resources & Projects/MacBook/flutter projects/spenditure/assets/transaction_icons/subscription.svg)
+  static const String ASSETS_TRANSACTION_ICONS_SUBSCRIPTION_SVG =
+      'assets/transaction_icons/subscription.svg';
 }

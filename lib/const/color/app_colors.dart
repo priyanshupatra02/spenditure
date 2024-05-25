@@ -29,6 +29,7 @@ class AppColors {
   static const Color kSuccessColor = Color(0xFF00A86B);
 
   //grey colors
+  static Color kGrey = const Color(0xFF91919F);
   static Color kGrey100 = Colors.grey.shade100;
   static Color kGrey200 = Colors.grey.shade200;
   static Color kGrey300 = Colors.grey.shade300;

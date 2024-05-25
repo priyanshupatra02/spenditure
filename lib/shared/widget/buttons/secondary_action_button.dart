@@ -9,15 +9,15 @@ class SecondaryActionButton extends StatelessWidget {
     required this.onPressed,
     this.color = AppColors.kOnPrimaryColor,
     this.icon = const Icon(Icons.download_rounded),
-    this.isIcon = false,
+    this.isIcon = true,
     this.padding,
     this.freeSize = true,
-    required this.secondaryText,
-    this.fontWeight = FontWeight.w400,
+    this.secondaryText,
+    this.fontWeight,
   });
   final BorderRadiusGeometry? borderRadius;
   final String labelText;
-  final String secondaryText;
+  final String? secondaryText;
   final VoidCallback onPressed;
   final Color? color;
   final Widget icon;
@@ -25,41 +25,64 @@ class SecondaryActionButton extends StatelessWidget {
 
   final bool freeSize;
   final EdgeInsetsGeometry? padding;
-  final FontWeight fontWeight;
+  final FontWeight? fontWeight;
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton.icon(
-      style: ElevatedButton.styleFrom(
-        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
-        backgroundColor: color,
-        elevation: 0.0,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20),
-        ),
-      ),
-      onPressed: onPressed,
-      icon: icon,
-      label: RichText(
-        text: TextSpan(
-          text: labelText,
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: Theme.of(context).textTheme.bodyLarge!.fontSize,
-            height: 1.3,
-          ),
-          children: [
-            TextSpan(
-              text: secondaryText,
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: Theme.of(context).textTheme.headlineSmall!.fontSize,
-                fontWeight: FontWeight.bold,
+    return isIcon
+        ? ElevatedButton.icon(
+            style: ElevatedButton.styleFrom(
+              padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+              backgroundColor: color,
+              elevation: 0.0,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(20),
               ),
             ),
-          ],
-        ),
-      ),
-    );
+            onPressed: onPressed,
+            icon: icon,
+            label: RichText(
+              text: TextSpan(
+                text: labelText,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: Theme.of(context).textTheme.bodyLarge!.fontSize,
+                  height: 1.3,
+                ),
+                children: [
+                  TextSpan(
+                    text: secondaryText ?? 'secondaryText',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: Theme.of(context).textTheme.headlineSmall!.fontSize,
+                      fontWeight: fontWeight ?? FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          )
+        : ElevatedButton(
+            onPressed: onPressed,
+            style: ElevatedButton.styleFrom(
+              elevation: 0.0,
+              // shape: const RoundedRectangleBorder(
+              //     borderRadius: borderRadius ?? BorderRadius.circular(25),
+              //     ),
+              backgroundColor: AppColors.kSecondaryColor,
+              // minimumSize: freeSize ? const Size(0, 0) : const Size(double.infinity, 55),
+            ),
+            // child: <Widget>[
+            // if (isLoading) const CupertinoActivityIndicator(),
+            child: Text(
+              labelText,
+              style: TextStyle(
+                // fontSize: Theme.of(context).textTheme.bodySmall!.fontSize,
+                fontWeight: fontWeight ?? FontWeight.bold,
+                letterSpacing: 0.4,
+              ),
+            )
+            // ].hStack(alignment: MainAxisAlignment.center),
+            );
   }
 }

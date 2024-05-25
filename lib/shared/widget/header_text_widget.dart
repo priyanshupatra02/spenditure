@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 
-class SpendFrequencyHeaderText extends StatelessWidget {
-  const SpendFrequencyHeaderText({
-    super.key,
+class HeaderTextWidget extends StatelessWidget {
+  final String title;
+  const HeaderTextWidget({
+    super.key, required this.title,
   });
 
   @override
   Widget build(BuildContext context) {
     return Text(
-      'Spend Frequency',
+      title,
       style: TextStyle(
         fontSize: Theme.of(context).textTheme.headlineSmall!.fontSize,
         fontWeight: FontWeight.bold,
