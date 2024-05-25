@@ -8,6 +8,22 @@ class R {
   static const String ASSETS_ANIMATION_ONBOARDING_ANIMATION_RIV =
       'assets/animation/onboarding_animation.riv';
 
+  /// ![preview](file:///Users/priyanshupatra/Desktop/Developer/Flutter Resources & Projects/MacBook/flutter projects/spenditure/assets/bottom_nav_bar_icons/budget.svg)
+  static const String ASSETS_BOTTOM_NAV_BAR_ICONS_BUDGET_SVG =
+      'assets/bottom_nav_bar_icons/budget.svg';
+
+  /// ![preview](file:///Users/priyanshupatra/Desktop/Developer/Flutter Resources & Projects/MacBook/flutter projects/spenditure/assets/bottom_nav_bar_icons/home.svg)
+  static const String ASSETS_BOTTOM_NAV_BAR_ICONS_HOME_SVG =
+      'assets/bottom_nav_bar_icons/home.svg';
+
+  /// ![preview](file:///Users/priyanshupatra/Desktop/Developer/Flutter Resources & Projects/MacBook/flutter projects/spenditure/assets/bottom_nav_bar_icons/profile.svg)
+  static const String ASSETS_BOTTOM_NAV_BAR_ICONS_PROFILE_SVG =
+      'assets/bottom_nav_bar_icons/profile.svg';
+
+  /// ![preview](file:///Users/priyanshupatra/Desktop/Developer/Flutter Resources & Projects/MacBook/flutter projects/spenditure/assets/bottom_nav_bar_icons/transaction.svg)
+  static const String ASSETS_BOTTOM_NAV_BAR_ICONS_TRANSACTION_SVG =
+      'assets/bottom_nav_bar_icons/transaction.svg';
+
   /// ![preview](file:///Users/priyanshupatra/Desktop/Developer/Flutter Resources & Projects/MacBook/flutter projects/spenditure/assets/icons/expense.svg)
   static const String ASSETS_ICONS_EXPENSE_SVG = 'assets/icons/expense.svg';
 

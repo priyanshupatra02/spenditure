@@ -64,3 +64,4 @@ flutter:
     - assets/icons/
     - assets/animation/
     - assets/transaction_icons/
+    - assets/bottom_nav_bar_icons/

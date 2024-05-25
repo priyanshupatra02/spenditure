@@ -7,9 +7,13 @@ class AppRouter extends $AppRouter {
   @override
   late final List<AutoRoute> routes = [
     AdaptiveRoute(
-      page: HomeRoute.page,
-      path: '/',
+      page: NavbarRoute.page,
+      path: '/navbar',
       initial: true,
     ),
+    AdaptiveRoute(page: HomeRoute.page, path: '/home'),
+    AdaptiveRoute(page: TransactionRoute.page, path: '/transaction'),
+    AdaptiveRoute(page: BudgetRoute.page, path: '/budget'),
+    AdaptiveRoute(page: ProfileRoute.page, path: '/profile'),
   ];
 }
