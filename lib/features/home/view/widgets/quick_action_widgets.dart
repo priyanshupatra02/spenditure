@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:intl/intl.dart';
 import 'package:spenditure/const/color/app_colors.dart';
+import 'package:spenditure/const/resource.dart';
 
 class QuickActionWidgets extends StatelessWidget {
   const QuickActionWidgets({
@@ -50,10 +52,9 @@ class QuickActionWidgets extends StatelessWidget {
           label: Text(DateFormat.MMMMd().format(now).toString()),
         ),
         const Spacer(),
-        const Icon(
-          Icons.notifications,
-          color: AppColors.kPrimaryColor,
-        )
+        SvgPicture.asset(
+          R.ASSETS_ICONS_NOTIFICATION_SVG,
+        ),
       ],
     );
   }

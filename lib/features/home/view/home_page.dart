@@ -4,6 +4,7 @@ import 'package:spenditure/const/color/app_colors.dart';
 import 'package:spenditure/features/home/view/widgets/account_balance_header_text.dart';
 import 'package:spenditure/features/home/view/widgets/income_and_expense_widget.dart';
 import 'package:spenditure/features/home/view/widgets/quick_action_widgets.dart';
+import 'package:spenditure/features/home/view/widgets/spend_frequency_header_text.dart';
 import 'package:spenditure/features/home/view/widgets/total_account_balance.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -61,8 +62,19 @@ class HomeView extends StatelessWidget {
           ),
         ),
       ),
-      body: const Center(
-        child: Text('Home Page'),
+      body: SafeArea(
+        child: SingleChildScrollView(
+          physics: const BouncingScrollPhysics(),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              //Spend Frequency Header Text
+              const SpendFrequencyHeaderText().pSymmetric(h: 20, v: 20),
+              //Line Chart
+              // const LineChartWidget(),
+            ],
+          ),
+        ),
       ),
     );
   }

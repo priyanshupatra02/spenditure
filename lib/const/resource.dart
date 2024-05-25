@@ -14,6 +14,10 @@ class R {
   /// ![preview](file:///Users/priyanshupatra/Desktop/Developer/Flutter Resources & Projects/MacBook/flutter projects/spenditure/assets/icons/income.svg)
   static const String ASSETS_ICONS_INCOME_SVG = 'assets/icons/income.svg';
 
+  /// ![preview](file:///Users/priyanshupatra/Desktop/Developer/Flutter Resources & Projects/MacBook/flutter projects/spenditure/assets/icons/notification.svg)
+  static const String ASSETS_ICONS_NOTIFICATION_SVG =
+      'assets/icons/notification.svg';
+
   /// ![preview](file:///Users/priyanshupatra/Desktop/Developer/Flutter Resources & Projects/MacBook/flutter projects/spenditure/assets/icons/spenditure_logo.svg)
   static const String ASSETS_ICONS_SPENDITURE_LOGO_SVG =
       'assets/icons/spenditure_logo.svg';
