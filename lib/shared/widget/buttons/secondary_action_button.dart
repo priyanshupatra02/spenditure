@@ -45,7 +45,7 @@ class SecondaryActionButton extends StatelessWidget {
               text: TextSpan(
                 text: labelText,
                 style: TextStyle(
-                  color: Colors.white,
+                  color: AppColors.kBackgroundColor,
                   fontSize: Theme.of(context).textTheme.bodyLarge!.fontSize,
                   height: 1.3,
                 ),
@@ -53,7 +53,7 @@ class SecondaryActionButton extends StatelessWidget {
                   TextSpan(
                     text: secondaryText ?? 'secondaryText',
                     style: TextStyle(
-                      color: Colors.white,
+                      color: AppColors.kBackgroundColor,
                       fontSize: Theme.of(context).textTheme.headlineSmall!.fontSize,
                       fontWeight: fontWeight ?? FontWeight.bold,
                     ),
@@ -69,6 +69,7 @@ class SecondaryActionButton extends StatelessWidget {
               // shape: const RoundedRectangleBorder(
               //     borderRadius: borderRadius ?? BorderRadius.circular(25),
               //     ),
+              shape: const StadiumBorder(),
               backgroundColor: AppColors.kSecondaryColor,
               // minimumSize: freeSize ? const Size(0, 0) : const Size(double.infinity, 55),
             ),
@@ -77,12 +78,13 @@ class SecondaryActionButton extends StatelessWidget {
             child: Text(
               labelText,
               style: TextStyle(
-                // fontSize: Theme.of(context).textTheme.bodySmall!.fontSize,
+                fontSize: Theme.of(context).textTheme.bodySmall!.fontSize,
                 fontWeight: fontWeight ?? FontWeight.bold,
                 letterSpacing: 0.4,
+                color: AppColors.kPrimaryColor,
               ),
-            )
+            ),
             // ].hStack(alignment: MainAxisAlignment.center),
-            );
+          );
   }
 }

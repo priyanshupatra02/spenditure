@@ -52,7 +52,7 @@ class Themes {
           elevatedButtonElevation: 0.0,
           elevatedButtonTextStyle: MaterialStatePropertyAll(
             TextStyle(
-              fontSize: 18.0,
+              fontSize: 15,
               fontWeight: FontWeight.w600,
             ),
           ),

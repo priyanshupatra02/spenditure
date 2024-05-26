@@ -11,6 +11,7 @@ class SeeAllButton extends StatelessWidget {
     return SecondaryActionButton(
       isIcon: false,
       onPressed: () {},
+      fontWeight: FontWeight.w500,
       labelText: 'See All',
     );
   }
