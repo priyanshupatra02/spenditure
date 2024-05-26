@@ -44,7 +44,7 @@ class Themes {
 
         subThemesData: const FlexSubThemesData(
           //for all buttons size
-          buttonMinSize: Size(double.maxFinite, 56),
+          // buttonMinSize: Size(double.maxFinite, 56),
           //for elevated button styling
           elevatedButtonRadius: 16.0,
           elevatedButtonSecondarySchemeColor: SchemeColor.primary,
