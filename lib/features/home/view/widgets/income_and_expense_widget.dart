@@ -12,6 +12,7 @@ class IncomeAndExpenseButtons extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         //income button
         SecondaryActionButton(
@@ -21,7 +22,6 @@ class IncomeAndExpenseButtons extends StatelessWidget {
           color: AppColors.kSuccessColor,
           icon: SvgPicture.asset(R.ASSETS_ICONS_INCOME_SVG),
         ),
-        const Spacer(),
         //expense button
         SecondaryActionButton(
           labelText: 'Expense\n',
